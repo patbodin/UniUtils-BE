@@ -52,4 +52,12 @@ export class LoginController {
     ): any {
         return this.loginService.addNewUser(username, password, isadmin);
     }
+
+    @Post('/v1/removeuser')
+    @Header('Content-Type', 'application/json')
+    removeUser(
+        @Body('id') id: string
+    ): any {
+        return this.loginService.removeUser(id);
+    }
 }

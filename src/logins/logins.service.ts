@@ -111,12 +111,44 @@ export class LoginService {
         return finalResult;
     }
 
+    removeUser(id: string): any {
+        
+        let resultMsg: any;
+
+        const jsonData = this.getUserFromFile(FileSystemConst.userlistPath);
+
+        const result = jsonData.users.find(item => item.id === id);
+
+        if(!result) {
+            resultMsg = new LoginResult(ResponseConst.FAIL, ResponseCodeConst.BTWS002, ResponseMsgConst.BTWS002);
+        }
+        else {
+            const newJsonData = jsonData.users.filter(item => item.id !== id);
+
+            // console.log(newJsonData);
+
+            this.writeUserToFile(FileSystemConst.userlistPath, { users: newJsonData});
+
+            resultMsg = new LoginResult(ResponseConst.SUCCESS, ResponseCodeConst.CTWS000, ResponseMsgConst.CTWS000);
+        }
+
+        const oDatetime = this.datetimeUtils.getDateTimeTimestamp();
+        const respDateTime = { 
+            datetime: oDatetime.datetime,
+            timestamp: oDatetime.timestamp
+        };
+
+        const finalResult = { ...resultMsg, ...respDateTime };
+        
+        return finalResult;
+    }
+
     private writeUserToFile(filePath: string, jsonContent: any): void {
         fs.writeFile(filePath, JSON.stringify(jsonContent, null, 2), 'utf-8', (err) => {
             if(err) console.log(err);
         });
         
-        console.log("Add new user successfully!");
+        console.log("Write users successfully!");
     }
 
     private getUserFromFile(filePath: string): any {
