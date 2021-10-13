@@ -1,5 +1,7 @@
+import { ResponseCodeConst, ResponseMsgConst } from './../common/constant/response.model';
 /* eslint-disable prettier/prettier */
 
+import { ResponseConst } from './../common/constant/response.model';
 import { LoginResult } from './logins.model';
 import { TestLogin, Login } from './logins.model';
 import { Injectable } from "@nestjs/common";
@@ -14,15 +16,15 @@ export class LoginService {
     }
 
     testLogin2(): TestLogin {
-        return new TestLogin("Success");
+        return new TestLogin(ResponseConst.SUCCESS);
     }
 
-    simpleLogin(): any {
-        const result = new LoginResult("Success", "CTWS000", "Process successful");
+    simpleLogin(myUser = "patbodin", myPass = "intajak"): any {
+        const result = new LoginResult(ResponseConst.SUCCESS, ResponseCodeConst.CTWS000, ResponseMsgConst.CTWS000);
         const loginUser = new Login();
 
-        loginUser.username = "patbodin";
-        loginUser.password = "intajak";
+        loginUser.username = myUser;
+        loginUser.password = myPass;
         loginUser.isAdmin = true;
 
         // const respDateTime = { datetime: this.datetimeUtils.getDateTime()};

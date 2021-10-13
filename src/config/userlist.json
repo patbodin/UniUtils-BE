@@ -1,6 +1,17 @@
 {
-    "id": 1234,
-    "username": "admin",
-    "password": "admin",
-    "isAdmin": true
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "admin",
+            "isAdmin": true
+        },
+        {
+            "id": 2,
+            "username": "patbodii",
+            "password": "patbodii",
+            "isAdmin": true
+        }
+    ]
+    
 }
