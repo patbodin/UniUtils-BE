@@ -42,4 +42,14 @@ export class LoginController {
         // return { username: username, password: password, datetime: Date.now().toString() };
         return this.loginService.validateLogin(username, password);
     }
+
+    @Post('/v1/adduser')
+    @Header('Content-Type', 'application/json')
+    addUser(
+        @Body('username') username: string,
+        @Body('password') password: string,
+        @Body('isadmin') isadmin: boolean
+    ): any {
+        return this.loginService.addNewUser(username, password, isadmin);
+    }
 }

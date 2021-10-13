@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 export class Login {
-    id: number;
+    id: string;
     username: string;
     password: string;
     isAdmin: boolean;
 
     constructor() {
-        this.id = 0;
+        this.id = "";
         this.username = "";
         this.password = "";
         this.isAdmin = false;

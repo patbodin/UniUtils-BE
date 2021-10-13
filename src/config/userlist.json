@@ -1,17 +1,58 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "admin",
-            "password": "admin",
-            "isAdmin": true
-        },
-        {
-            "id": 2,
-            "username": "patbodii",
-            "password": "patbodii",
-            "isAdmin": true
-        }
-    ]
-    
+  "users": [
+    {
+      "id": "f466c8f3-f209-4056-95db-1d7e5c109e19",
+      "username": "admin",
+      "password": "admin",
+      "isAdmin": true
+    },
+    {
+      "id": "df9f83f1-b228-46c5-9d84-362004f2e0dc",
+      "username": "patbodii",
+      "password": "patbodii",
+      "isAdmin": true
+    },
+    {
+      "id": "ee3e9f6b-6e16-41da-8443-3b990247d5a7",
+      "username": "pond",
+      "password": "pond",
+      "isAdmin": true
+    },
+    {
+      "id": "65287ec2-0370-47a5-bbe8-586e0a05bac2",
+      "username": "pondkub",
+      "password": "pond",
+      "isAdmin": true
+    },
+    {
+      "id": "65ac6546-0288-4adc-bcea-af5c9f9bb86a",
+      "username": "pondkubkub",
+      "password": "pond",
+      "isAdmin": true
+    },
+    {
+      "id": "0a8b0d1a-65e2-4f50-a248-9decb8bfdb6d",
+      "username": "pond1",
+      "password": "pond1",
+      "isAdmin": true
+    },
+    {
+      "id": "c5d165d0-2c3b-11ec-97b7-fd9a6e1b7fa2",
+      "username": "pondx",
+      "password": "pond1",
+      "isAdmin": true
+    },
+    {
+      "id": "34642140-2c3c-11ec-bf9d-f79ddd935422",
+      "username": "pondxyz",
+      "password": "pond1",
+      "isAdmin": true
+    },
+    {
+      "id": "8a5fd940-2c3c-11ec-bcc1-b7054cec1b26",
+      "username": "pondxyzwww",
+      "password": "pond1",
+      "isAdmin": true
+    }
+  ]
 }
