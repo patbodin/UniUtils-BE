@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  nestjs:
+  #  build:
+  #    context: .
+  #    dockerfile: Dockerfile
+    image: uniutil_be:1.0
+    container_name: uniutil_be
+    restart: always
+    # env_file: .env
+    # environment:
+    #   - MONGO_USERNAME=$MONGO_USERNAME
+    #   - MONGO_PASSWORD=$MONGO_PASSWORD
+    #   - MONGO_HOSTNAME=db
+    #   - MONGO_PORT=$MONGO_PORT
+    #   - MONGO_DB=$MONGO_DB
+    ports:
+      - "5199:3000"
+    # networks:
+    #   - app-network
+    command: node ./dist/main.js
+
+# networks:
+#   app-network:
+#     driver: bridge
