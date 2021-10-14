@@ -1,0 +1,24 @@
+FROM node:16-alpine3.14
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package.json ./
+
+RUN npm config set registry https://lib.matador.ais.co.th/repository/npm/ \
+    && npm set puppeteer_download_host=https://lib.matador.ais.co.th/repository/raw \
+    && npm install --quiet
+
+# Bundle app source
+COPY . .
+
+RUN npm run build
+
+RUN chmod -R 775 /usr/src/app
+
+#EXPOSE 8080
+
+CMD [ "node", "./dist/main.js" ]
