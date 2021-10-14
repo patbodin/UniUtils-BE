@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 import { TestLogin } from './logins.model';
 import { Controller, Get, Query, Param, Post, Body, Header } from "@nestjs/common";
 import { LoginService } from "./logins.service";

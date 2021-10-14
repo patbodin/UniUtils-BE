@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 import { ResponseCodeConst, ResponseMsgConst } from './../common/constant/response.model';
 import { ResponseConst } from './../common/constant/response.model';
 import { LoginResult } from './logins.model';

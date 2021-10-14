@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 import { DateTimeUtilsService } from './../common/datetimeutils/datetimeutils.service';
 import { LoginService } from './logins.service';
 import { LoginController } from './logins.controller';

@@ -1,6 +1,3 @@
-/* eslint-disable prettier/prettier */
-
-
 class ResponseConst {
     public static SUCCESS = "Success";
     public static FAIL = "Fail"
